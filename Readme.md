@@ -4,11 +4,11 @@ Debezium’s MongoDB connector tracks a MongoDB replica set or a MongoDB sharded
 
 ## How to start
 
-You can run docker-compose with `register.bat` file.The file use `docker-compose-mongodb.yaml` and `register-mongodb.json` files.
+You can run docker-compose with `register.sh` file.The file use `docker-compose-mongodb.yaml` and `register-mongodb.json` files.
 
 ```sh
 cd debezium-mongodb-starter/
-./register.bat
+./register.sh
 ```
 
 ### Insert document to MongoDB and Test Scenario
