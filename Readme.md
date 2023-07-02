@@ -78,7 +78,7 @@ docs.confluent.io/platform/current/tutorials/examples/clients/docs/clients-all-e
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE.md)
 
 
 ## Authors
