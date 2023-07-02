@@ -75,3 +75,13 @@ kafdrop   | 9000             | github.com/obsidiandynamics/kafdrop#readme
 debezium.io/documentation/reference/connectors/mongodb.html
 
 docs.confluent.io/platform/current/tutorials/examples/clients/docs/clients-all-examples.html#clients-all-examples
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Authors
+
+- [@kenanbasdemir](https://www.github.com/kenanbasdemir)
+

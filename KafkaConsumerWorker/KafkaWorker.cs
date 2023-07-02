@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace KafkaConsumerWorker
 {
@@ -21,16 +19,16 @@ namespace KafkaConsumerWorker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-	    _logger.LogInformation("Registry by Kenan BAŞDEMİR");
+            _logger.LogInformation("Issues: https://github.com/kenanbasdemir/debezium-mongodb-starter/issues");
             _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-            
+
             var conf = new ConsumerConfig
             {
                 GroupId = "messageConsumer",
                 BootstrapServers = "127.0.0.1:9094",
                 AutoOffsetReset = AutoOffsetReset.Earliest
             };
-            using (var builder = new ConsumerBuilder<Ignore, 
+            using (var builder = new ConsumerBuilder<Ignore,
                 string>(conf).Build())
             {
                 builder.Subscribe(topic);

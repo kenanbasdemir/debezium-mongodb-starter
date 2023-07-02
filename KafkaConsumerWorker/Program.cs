@@ -1,24 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using KafkaConsumerWorker;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace KafkaConsumerWorker
-{
-    public class Program
+IHost host = Host.CreateDefaultBuilder(args)
+    .ConfigureServices(services =>
     {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+        services.AddHostedService<KafkaWorker>();
+    })
+    .Build();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureServices((hostContext, services) =>
-                {
-                    services.AddHostedService<KafkaWorker>();
-                });
-    }
-}
+await host.RunAsync();
